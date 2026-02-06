@@ -13,3 +13,13 @@ def split_data(X, Y):
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size =0.4, random_state=0)
     return X_train, X_test, Y_train, Y_test
 
+def model_train(X_train, X_test, Y_train, Y_test):
+    
+    return lin_regressor
+
+def visualize_result(X_train, X_test, Y_train, Y_test, lin_regressor):
+    pass
+
+
+def main():
+    pass
