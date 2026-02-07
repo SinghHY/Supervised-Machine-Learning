@@ -25,3 +25,6 @@ plt.xlabel("Years of Experience")
 plt.ylabel("Salary")
 plt.legend()
 plt.show()
+
+
+
