@@ -33,7 +33,8 @@ def model_train(X_train, X_test, Y_train, Y_test):
     return lin_regressor
 
 def visualize_result(X_train, X_test, Y_train, Y_test, lin_regressor):
-    plt.scatter(X_train1, Y_train1, color = 'blue')
+    plt.scatter(X_test1, Y_test1 , color = 'blue')
+    plt.plot(X_test1, y_pred, color = 'red')
     plt.title('Area vs Price of the land')
     plt.xlabel('Area')
     plt.ylabel('price')
