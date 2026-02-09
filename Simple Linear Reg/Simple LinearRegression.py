@@ -30,10 +30,10 @@ def model_train(X_train, X_test, Y_train, Y_test):
     lin_regressor = LinearRegression()
     lin_regressor.fit(X_train1, Y_train1)
     
-    #y_pred = lin_regressor.predict(X_test1)
-    #print(y_pred)
-    #r_suare = r2_score(Y_test1, y_pred)
-    #return lin_regressor
+    y_pred = lin_regressor.predict(X_test1)
+    print(y_pred)
+    r_suare = r2_score(Y_test1, y_pred)
+    return lin_regressor
     
 def visualize_result(X_train, X_test, Y_train, Y_test, lin_regressor):
     plt.scatter(X_test1, Y_test1 , color = 'blue')
