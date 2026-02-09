@@ -1,11 +1,13 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
+from tkinter import *
 import numpy as np
 
 def readFile():
-    dataset = pd.read_csv("landprice.csv")
+    dataset = pd.read_csv("T:\SML\Simple Linear Reg\landprice.csv")
     #X = dataset.iloc[0: ,0].values
     #Y = dataset.iloc[0: ,-1].values
     X = dataset[['Area']].values    # Feature
@@ -28,10 +30,11 @@ def model_train(X_train, X_test, Y_train, Y_test):
     lin_regressor = LinearRegression()
     lin_regressor.fit(X_train1, Y_train1)
     
-    y_pred = lin_regressor.predict(X_test1)
-    print(y_pred)
-    return lin_regressor
-
+    #y_pred = lin_regressor.predict(X_test1)
+    #print(y_pred)
+    #r_suare = r2_score(Y_test1, y_pred)
+    #return lin_regressor
+    
 def visualize_result(X_train, X_test, Y_train, Y_test, lin_regressor):
     plt.scatter(X_test1, Y_test1 , color = 'blue')
     plt.plot(X_test1, y_pred, color = 'red')
