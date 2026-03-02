@@ -3,11 +3,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
-from tkinter import *
 import numpy as np
 
 def readFile():
-    dataset = pd.read_csv("T:\SML\Simple Linear Reg\landprice.csv")
+    dataset = pd.read_csv('C:\\Users\\hsingh96\\Downloads\\SML\\Simple Linear Reg\\landprice.csv')
     #X = dataset.iloc[0: ,0].values
     #Y = dataset.iloc[0: ,-1].values
     X = dataset[['Area']].values    # Feature
